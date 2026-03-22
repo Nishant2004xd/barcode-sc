@@ -1,0 +1,281 @@
+.products-container {
+  padding: 32px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.products-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.search-input {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 280px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.count {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.loading, .empty {
+  text-align: center;
+  padding: 60px;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.empty a { color: #4f46e5; }
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.875rem;
+}
+
+.products-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.products-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.products-table tr:hover td {
+  background: #f8fafc;
+}
+
+.code-badge {
+  background: #ede9fe;
+  color: #5b21b6;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.name-cell {
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+.selling-price {
+  font-weight: 700;
+  color: #059669;
+}
+
+.status-badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.barcode-thumb {
+  height: 36px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.qr-thumb {
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.barcode-thumb:hover, .qr-thumb:hover {
+  transform: scale(1.1);
+}
+
+.btn-print {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-print:hover {
+  background: #3730a3;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.modal h2 {
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+}
+
+.modal-name {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0 0 24px;
+}
+
+.modal-images {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.modal-images img {
+  max-width: 220px;
+  max-height: 180px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.img-label {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Print chooser */
+.print-chooser {
+  max-width: 480px;
+}
+
+.chooser-hint {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0 0 20px;
+}
+
+.chooser-options {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.chooser-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.chooser-btn:hover {
+  border-color: #4f46e5;
+  background: #f0f0ff;
+  transform: translateY(-2px);
+}
+
+.chooser-btn img {
+  max-width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.chooser-btn span {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+}
+
+.chooser-btn small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
